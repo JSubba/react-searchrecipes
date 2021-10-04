@@ -18,7 +18,7 @@ function App() {
     const searchRecipes = async () => {
         let searchResult = await Axios.get(url);
         setRecipes(searchResult.data.hits);
-        console.log(searchResult);
+        setQuery("");
     };
 
     const onSubmit = (e) => {
